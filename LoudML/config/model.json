@@ -1,0 +1,29 @@
+{
+        "offset": "10s",
+        "features": {
+            "io": [
+                {
+                    "metric": "count",
+                    "field": "code",
+                    "name": "count-all",
+                    "default": 0,
+                    "measurement": "traffic",
+                    "anomaly_type": "low_high"
+                }
+            ]
+        },
+        "bucket_interval": "30m",
+        "min_threshold": 75,
+        "max_threshold": 95,
+        "name": "all-traffic",
+        "default_datasource": "ecommerce",
+        "interval": "1m",
+        "max_evals": 5,
+        "type": "timeseries",
+        "span": 10,
+        "forecast": 5,
+        "seasonality": {
+            "daytime": true,
+            "weekday": true
+        }
+}
